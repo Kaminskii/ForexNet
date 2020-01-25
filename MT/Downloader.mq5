@@ -203,8 +203,8 @@ void OnTick()
       double sar = sarVal[0];
       double momentum = momentumVal[0];
       
+     //jacks first COMMIT
      
-      
      string subfolder="Research";
      string line = "";
       int filehandle=FileOpen(subfolder+"\\dataFile.txt",FILE_WRITE|FILE_READ|FILE_TXT);
