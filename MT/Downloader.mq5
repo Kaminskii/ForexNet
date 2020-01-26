@@ -3,6 +3,10 @@
 //|                        Copyright 2019, MetaQuotes Software Corp. |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
+
+
+#include <MQLMySQL.mqh>
+
 input int      Period= 12;
 input int      SL= 30;
 input int      TP= 50;
@@ -29,6 +33,7 @@ double momentumVal[];
 
 double p_close; // Variable to store the close value of a bar
 int STP, TKP;   // To be used for Stop Loss & Take Profit values
+
 
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
