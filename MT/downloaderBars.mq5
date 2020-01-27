@@ -236,24 +236,9 @@ void OnTick()
    
    
    string query = "";
-   query = ("INSERT INTO bars (timeofprice, closeprice, rsi, movingaverage, ac, sar, momentum) VALUES ('" + TimeCurrent() + "','" + price + "','" + rsi + "','" + ma + "','" + ac + "','" + sar + "','" + momentum + "');");
+   query = ("INSERT IGNORE INTO bars (timeofprice, closeprice, rsi, movingaverage, ac, sar, momentum) VALUES ('" + TimeCurrent() + "','" + price + "','" + rsi + "','" + ma + "','" + ac + "','" + sar + "','" + momentum + "');");
    MySqlExecute(DB, query);
   
-   string subfolder="Research";
-   string line = "";
-   int filehandle=FileOpen(subfolder+"\\dataFile.txt",FILE_WRITE|FILE_READ|FILE_TXT);
-   if(filehandle!=INVALID_HANDLE)
-     {  
-      line = TimeCurrent() + "," + price + "," + rsi + "," + ma + "," + ac + "," + sar + "," + momentum;  
-      FileSeek(filehandle,0,SEEK_END);
-      FileWrite(filehandle,line);
-      FileFlush(filehandle);
-      FileClose(filehandle);
-     }
-   else 
-     {
-      Print("File open failed, error ",GetLastError()); 
-      return;
-     }
+ 
   }
 //+------------------------------------------------------------------+

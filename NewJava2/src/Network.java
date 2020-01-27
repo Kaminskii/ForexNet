@@ -1,5 +1,7 @@
+import javax.naming.spi.DirObjectFactory;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.IllegalFormatCodePointException;
 
 
 public class Network {
@@ -7,6 +9,7 @@ public class Network {
     //DEFAULT PARAMETER VALUES
     public float PARAM_LearnRate = (float) 0.5;
     public float PARAM_WeightRange = (float) 1;
+    public float PARAM_Gradient = (float) 1;
 
     private Layer[] layers; //Array of layers
     private float[][][] weight; // [Layer L][Neuron in L][Neuron in L-1]
@@ -14,15 +17,6 @@ public class Network {
     private int INPUT_SIZE; // The number of input neurons
     private int OUTPUT_SIZE;// The number of output neurons
     private int NETWORK_SIZE; // the number of layers in the network
-
-    public float getLearnRate() {
-        return PARAM_LearnRate;
-    }
-
-    public float getPARAM_WeightRange() {
-        return PARAM_WeightRange;
-    }
-
 
     //Default constructor
     public Network(int... NETWORK_LAYER_SIZE) {
@@ -70,12 +64,22 @@ public class Network {
         for (int layer = 1; layer < NETWORK_SIZE; layer++) { // for each layer except the input
             for (int neuron = 0; neuron < NETWORK_LAYER_SIZE[layer]; neuron++) { // take each neuron in that layer
                 float sum = 0;
-                for (int prevNeuron = 0; prevNeuron < NETWORK_LAYER_SIZE[layer - 1]; prevNeuron++) {
+                for (int prevNeuron = 0; prevNeuron < NETWORK_LAYER_SIZE[layer - 1]; prevNeuron++) { // for each neuron in the prev layer
                     sum += layers[layer - 1].getNeuron(prevNeuron).getOutput() * weight[layer][prevNeuron][neuron];
                 }
                 Neuron neuroonn = layers[layer].getNeuron(neuron);
-                neuroonn.setOutput(sigmoid(sum));// sigmoid after summing, the set the value for that neuron
-                neuroonn.setOutput_derivative(neuroonn.getOutput() * (1 - neuroonn.getOutput())); // The derivative of the sigmoid function used for backpropError
+                if (layer == NETWORK_LAYER_SIZE[NETWORK_SIZE-1]){ // If it the last layer
+                    if (sum < 0){ // Using aleks exp
+                        neuroonn.setOutput(aleks_exp(sum));
+                        neuroonn.setOutput_derivative(PARAM_Gradient * neuroonn.getOutput()); // The derivative of the sigmoid function used for backpropErro
+                    } else { //Using aleks linear
+                        neuroonn.setOutput(aleks_linear(sum));
+                        neuroonn.setOutput_derivative(PARAM_Gradient);
+                    }
+                } else {
+                    neuroonn.setOutput(sigmoid(sum));// sigmoid after summing, the set the value for that neuron
+                    neuroonn.setOutput_derivative(neuroonn.getOutput() * (1 - neuroonn.getOutput())); // The derivative of the sigmoid function used for backpropErro
+                }
             }
         }
 
@@ -89,6 +93,15 @@ public class Network {
     // This function takes a single float value and returns the sigmoid of that value
     public float sigmoid(float x) {
         return (float) (1d / (1 + Math.exp(-x))); // 1d is used so that a double value is returned
+    }
+    public float sigmoid_derivative(float x){
+        return (sigmoid(x)*(1-sigmoid(x)));
+    }
+    public float aleks_linear(float x){
+        return (PARAM_Gradient * x) + 1;
+    }
+    public float aleks_exp(float x){
+        return (float) (Math.exp(PARAM_Gradient*x));
     }
 
     // This function connects everything together by calling other necessary methods
