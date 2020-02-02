@@ -68,10 +68,10 @@ public class Network {
                     sum += layers[layer - 1].getNeuron(prevNeuron).getOutput() * weight[layer][prevNeuron][neuron];
                 }
                 Neuron neuroonn = layers[layer].getNeuron(neuron);
-                if (layer == NETWORK_LAYER_SIZE[NETWORK_SIZE-1]){ // If it the last layer
+                if (layer == NETWORK_SIZE-1){ // If it the last layer
                     if (sum < 0){ // Using aleks exp
                         neuroonn.setOutput(aleks_exp(sum));
-                        neuroonn.setOutput_derivative(PARAM_Gradient * neuroonn.getOutput()); // The derivative of the sigmoid function used for backpropErro
+                        neuroonn.setOutput_derivative(PARAM_Gradient * aleks_exp(sum)); // The derivative of the sigmoid function used for backpropErro
                     } else { //Using aleks linear
                         neuroonn.setOutput(aleks_linear(sum));
                         neuroonn.setOutput_derivative(PARAM_Gradient);
@@ -100,9 +100,10 @@ public class Network {
     public float aleks_linear(float x){
         return (PARAM_Gradient * x) + 1;
     }
-    public float aleks_exp(float x){
-        return (float) (Math.exp(PARAM_Gradient*x));
-    }
+    public float aleks_linear_der(float x){ return (PARAM_Gradient); }
+
+    public float aleks_exp(float x){ return (float) (Math.exp(PARAM_Gradient*x)); }
+    public float aleks_exp_der(float x){ return   (float) (PARAM_Gradient*(Math.exp(PARAM_Gradient*x))); }
 
     // This function connects everything together by calling other necessary methods
     public void train(float[] input, float[] target) {
@@ -116,8 +117,7 @@ public class Network {
     public void backpropError(float[] target) {
         for (int neuron = 0; neuron < NETWORK_LAYER_SIZE[NETWORK_SIZE - 1]; neuron++) { //Calculating Error for output neurons
             Neuron neuroon = layers[NETWORK_SIZE - 1].getNeuron(neuron);
-            neuroon.setError((neuroon.getOutput() - target[neuron])
-                    * neuroon.getOutput_derivative());
+            neuroon.setError((target[neuron] - neuroon.getOutput())* neuroon.getOutput_derivative());
 
         }
         for (int layer = NETWORK_SIZE - 2; layer > 0; layer--) { // Starting at the last hidden layer
@@ -141,7 +141,11 @@ public class Network {
                     Neuron neuroon = layers[layer].getNeuron(neuron);
                     Neuron prevneuron = layers[layer - 1].getNeuron(prevNeuron);
 
-                    double delta = -PARAM_LearnRate * prevneuron.getOutput() * neuroon.getError();
+                    //if (layer == NETWORK_SIZE - 1){
+
+                    //}
+
+                    double delta = PARAM_LearnRate * prevneuron.getOutput() * neuroon.getError();
                     weight[layer][prevNeuron][neuron] += delta;
                 }
             }

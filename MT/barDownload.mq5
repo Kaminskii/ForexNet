@@ -57,25 +57,25 @@ int OnInit()
 //--- Get handle for RSI indicator
    rsiHandle=iRSI(_Symbol,_Period,Period,PRICE_CLOSE);
    maHandle=iMA(_Symbol,_Period,Period,0,MODE_EMA,PRICE_CLOSE);
-   volHandle= iVolumes(_Symbol,_Period,VOLUME_REAL);
-   forceHandle=iForce(_Symbol,_Period,Period,MODE_SMA,VOLUME_REAL);
+   volHandle= iVolumes(_Symbol,_Period,VOLUME_TICK);
+   forceHandle=iForce(_Symbol,_Period,Period,MODE_SMA,VOLUME_TICK);
    acHandle=iAC(_Symbol,_Period);
    sarHandle=iSAR(_Symbol,_Period,0.02,0.2);
    momentumHandle = iMomentum(_Symbol,_Period,Period,PRICE_CLOSE);
-   adHandle = iAD(_Symbol,_Period,PRICE_CLOSE);
+   adHandle = iAD(_Symbol,_Period,VOLUME_TICK);
    amaHandle =iAMA(_Symbol,_Period,Period,Period - 2,Period + 2,2,PRICE_CLOSE);
    aoHandle = iAO(_Symbol,_Period);
    atrHandle = iATR(_Symbol,_Period,Period);
    bearsHandle = iBearsPower(_Symbol,_Period,Period);
    bullsHandle = iBullsPower(_Symbol,_Period,Period);
    cciHandle = iCCI(_Symbol,_Period,Period,PRICE_CLOSE);
-   chaikinHandle = iChaikin(_Symbol,_Period,Period - 2,Period + 2,MODE_SMMA,PRICE_CLOSE);
+   chaikinHandle = iChaikin(_Symbol,_Period,Period - 2,Period + 2,MODE_SMMA,VOLUME_TICK);
    demaHandle = iDEMA(_Symbol,_Period,Period,2,PRICE_CLOSE);
    demarkerHandle = iDeMarker(_Symbol,_Period,Period);
    framaHandle = iFrAMA(_Symbol,_Period,Period,2,PRICE_CLOSE);
-   bwmfiHandle = iBWMFI(_Symbol,_Period,PRICE_CLOSE);
+   bwmfiHandle = iBWMFI(_Symbol,_Period,VOLUME_TICK);
    osmaHandle = iOsMA(_Symbol,_Period,Period - 2,Period + 2,2,PRICE_CLOSE);
-   obvHandle = iOBV(_Symbol,_Period,VOLUME_REAL);
+   obvHandle = iOBV(_Symbol,_Period,VOLUME_TICK);
    temaHandle = iTEMA(_Symbol,_Period,Period,2,PRICE_CLOSE);
    trixHandle = iTriX(_Symbol,_Period,Period,PRICE_CLOSE);
    wprHandle = iWPR(_Symbol,_Period,Period);
@@ -134,7 +134,7 @@ void OnDeinit(const int reason)
    IndicatorRelease(bearsHandle);
    IndicatorRelease(bullsHandle);
    IndicatorRelease(cciHandle);
-   IndicatorRelease(chaikiHandle);
+   IndicatorRelease(chaikinHandle);
    IndicatorRelease(demaHandle);
    IndicatorRelease(demarkerHandle);
    IndicatorRelease(framaHandle);
@@ -239,7 +239,7 @@ void OnTick()
    if(CopyBuffer(rsiHandle,0,0,5,rsiVal)<0){Alert("Error copying RSI indicator buffer - error:",GetLastError());return;}
    if(CopyBuffer(acHandle,0,0,5,acVal)<0){Alert("Error copying AC indicator buffer - error:",GetLastError());return;}
    if(CopyBuffer(sarHandle,0,0,5,sarVal)<0){Alert("Error copying SAR indicator buffer - error:",GetLastError());return;}
-   if(CopyBuffer(momentHandle,0,0,5,momentVal)<0){Alert("Error copying MOMENTUM indicator buffer - error:",GetLastError());return;}
+   if(CopyBuffer(momentumHandle,0,0,5,momentumVal)<0){Alert("Error copying MOMENTUM indicator buffer - error:",GetLastError());return;}
    if(CopyBuffer(volHandle,0,0,5,volVal)<0){Alert("Error copying VOL indicator buffer - error:",GetLastError());return;}
    if(CopyBuffer(forceHandle,0,0,5,forceVal)<0){Alert("Error copying FORCE indicator buffer - error:",GetLastError());return;}
    if(CopyBuffer(adHandle,0,0,5,adVal)<0){Alert("Error copying AD indicator buffer - error:",GetLastError());return;}
@@ -273,8 +273,8 @@ void OnTick()
    
    
    string query = "";// ignore means you won't see errors when there are duplicates. However means my server errors yet. I don't like errors on my server -_-
-   query = ("INSERT IGNORE INTO bars (timeofprice, closeprice, rsi, movingaverage, ac, sar, momentum, vol, forceIndex, ad, ama, atr, ao, bears, bulls, cci, chaikin, dema, demarker, frama, bwmfi, osma, obv, tema, trix, wpr, vidya) VALUES ('" 
-   + TimeCurrent() + "','" + price + "','" + rsi + "','" + ma + "','" + ac + "','" + sar + "','" + momentum + "','" + vol + "','" + force + "','" + ad + "','" + ama + "','" + atr + "','" + ao + "','" + bears + "','" + bulls + "','" + cci + "','" + chaikin + "','" + dema + "','" + demarker + "','" + frama + "','" + bwmfi + "','" + osma + "','" + obv + "','" + tema + "','" + trix + "','" + wpr + "','" +vidya +"');");
+   query = ("INSERT IGNORE INTO bardata2 (date, closePrice, rsi, ma, ac, sar, momentum, vol, forceIndex, ad, ama, atr, ao, bears, bulls, cci, chaikin, dema, demarker, frama, bwmfi, osma, obv, tema, trix, wpr, vidya) VALUES ('" 
+   + TimeCurrent() + "','" + price + "','" + rsi + "','" + ma + "','" + ac + "','" + sar + "','" + momentum + "','" + VOLUME_TICK + "','" + force + "','" + ad + "','" + ama + "','" + atr + "','" + ao + "','" + bears + "','" + bulls + "','" + cci + "','" + chaikin + "','" + dema + "','" + demarker + "','" + frama + "','" + bwmfi + "','" + osma + "','" + obv + "','" + tema + "','" + trix + "','" + wpr + "','" +vidya +"');");
    MySqlExecute(DB, query);
   
    string subfolder="Research";

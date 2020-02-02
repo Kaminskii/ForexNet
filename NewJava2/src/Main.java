@@ -14,12 +14,27 @@ public class Main {
         String password = "Once there was a spliff";
         connectJDBCToAWSEC2();
 
-        Network net = new Network(1,10,10,1);
-        float[] input = new float[1];
+        Network net = new Network(2,10,1,10,1);
+        net.PARAM_Gradient = (float) 0.01;
+        net.PARAM_LearnRate = (float) 0.01;
+        float[] input = new float[2];
         float[] output = new float[1];
+        float[] predicted;
+        input[0] = -3;
+        input[0] = 3;
+        output[0] = (float) 6;
 
-        input[0] = 1;
-        output[0] = -1;
+        float error = 0;
+        for (int i = 0; i < 1000000; i++) {
+            predicted = net.calculate(input);
+            error = error + ((output[0] - predicted[0]) * (output[0] - predicted[0]));
+            net.train(input,output);
+            if ((i % 100) == 0){
+                System.out.println("Average squared error over last 100 : " + error/100);
+
+                error = 0;
+            }
+        }
 
 
     }

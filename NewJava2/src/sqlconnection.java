@@ -22,6 +22,15 @@ public class sqlconnection {
             stmt = conn.createStatement();
             String sql;
             sql = "SELECT * FROM bardata.bars";
+           // sql = "CREATE TABLE IF NOT EXISTS bardata2 (\n" +
+           //         "barid INT AUTO_INCREMENT PRIMARY KEY,\n" +
+           //         "date VARCHAR(50),\n" +
+           //         "closePrice VARCHAR(50), rsi VARCHAR(50), ma VARCHAR(50), ac VARCHAR(50), sar VARCHAR(50),\n" +
+           //         " momentum VARCHAR(50), vol VARCHAR(50), force VARCHAR(50),\n" +
+           //         "ad VARCHAR(50), ama VARCHAR(50), atr VARCHAR(50), ao VARCHAR(50), bears VARCHAR(50), bulls VARCHAR(50), cci VARCHAR(50),\n" +
+           //         "chaikin VARCHAR(50), dema VARCHAR(50), demarker VARCHAR(50), frama VARCHAR(50), bwmfi VARCHAR(50), osma VARCHAR(50), obv VARCHAR(50),\n" +
+           //         "tema VARCHAR(50), trix VARCHAR(50),wpr VARCHAR(50), vidya VARCHAR(50)\n" +
+           //         ");";
             ResultSet rs = stmt.executeQuery(sql);
 //STEP 5: Extract data from result set
             while(rs.next()){
