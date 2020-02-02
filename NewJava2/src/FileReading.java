@@ -3,7 +3,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class FileReading {
+public class FileReading<x> {
 
     public ArrayList<Bar> Bars = new ArrayList<Bar>();
 
@@ -13,30 +13,23 @@ public class FileReading {
     double rsi;
     double ma;
 
+
+    int x = 50;// Define the amount of bars in average comparison.
+    // of the previous x bars.
+
+
+    double[] slope_BarValues;
+    double[][] indicator_Table;
     double[] BarValues;
-    double[] avg_BarValues;
+
     public FileReading(String filename){
 
         String line;
         int barCount = 0;
-
-
-          double avr_price = 0;   double price_diff[];
-          double avr_rsi = 0;     double rsi_diff;
-          double avr_ma = 0;      double ma_diff;
-
-          double difference[];
-
         double error = 0;
-        double[] avr_error = new double[100];
         Network net = new Network(15,50,100,1);
         net.PARAM_LearnRate = (float) 0.01;
         net.PARAM_Gradient = (float) 0.1;
-
-
-        int x = 15;// Define the amount of bars in average comparison.
-        // of the previous x bars.
-
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(filename));
@@ -55,29 +48,32 @@ public class FileReading {
                 }
 
             }
+
+
             Random rand = new Random();
             int random;
             for (int iteration = 0; iteration < 999999999; iteration++) {
                 random = rand.nextInt(Bars.size());
                 Bar bar = Bars.get(random);
-                while ( (bar.getIndex() < (x+1)) || ((bar.getIndex() % 3) == 0) ){
+                while ( (bar.getIndex() < (x+1)) || ((bar.getIndex() % 3) == 0) ) {
                     random = rand.nextInt(Bars.size());
                     bar = Bars.get(random);
                     continue;
                 }
-                //if ( (bar.getIndex() < (x+1)) || ((bar.getIndex() % 3) == 0) ){
-                //    continue;
-                //}
-                    //avg_BarValues = new double[bar.getIndicatorValues().length];
-                    //for (int i = random - x ; i < random; i++) { // For the last x bars
-                    //    for (int j = 0; j < avg_BarValues.length; j++) {
-                    //        avg_BarValues[j] = avg_BarValues[j] + Bars.get(i).getIndicatorValues()[j];
-                    //    }
-                    //}
-                    //for (int i = 0; i < avg_BarValues.length; i++) {
-                    //    avg_BarValues[i] = avg_BarValues[i] / x;
-                    //}
+                    slope_BarValues = new double[bar.getIndicatorValues().length];
+                    indicator_Table = new double[bar.getIndicatorValues().length][x];
 
+                    for (int i = random - x ; i < random; i++) { // For the last x bars
+                        for (int j = 0; j < slope_BarValues.length; j++) {
+                                indicator_Table[j][i - (random-x)] = Bars.get(i).getIndicatorValues()[j];
+                        }
+                    }
+
+                    for (int i = 0; i < slope_BarValues.length; i++) {
+                        for (int j = 0; j < x; j++) {
+
+                        }
+                    }
 
                     //difference = new double[bar.getIndicatorValues().length];
                     //price_diff = new double[bar.getIndicatorValues().length];

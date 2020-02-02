@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90c30db8-8dfa-4efc-aa45-89286b988a0a" name="Default Changelist" comment="" />
+    <list default="true" id="90c30db8-8dfa-4efc-aa45-89286b988a0a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.floo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.flooignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/MQLMySQL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/MQLMySQL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewJava2/src/FileReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewJava2/src/FileReading.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,12 +56,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1WwFQ7GaPXHMDHdDuTi27h0c5iy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MQL5-MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/NewJava2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -25,6 +82,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,6 +107,9 @@
       <option name="presentableId" value="Default" />
       <updated>1580052730755</updated>
       <workItem from="1580052732246" duration="10833000" />
+      <workItem from="1580678219885" duration="258000" />
+      <workItem from="1580678794950" duration="2359000" />
+      <workItem from="1580681305083" duration="26000" />
     </task>
     <servers />
   </component>
@@ -60,10 +121,25 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1580678355166">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1580678355166" />
+    <state x="450" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580678589200">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="450" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1580678589200" />
   </component>
 </project>
