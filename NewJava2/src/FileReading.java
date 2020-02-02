@@ -29,11 +29,12 @@ public class FileReading {
 
         double error = 0;
         double[] avr_error = new double[100];
-        Network net = new Network(6,100,100,100,6);
+        Network net = new Network(15,50,100,1);
+        net.PARAM_LearnRate = (float) 0.01;
+        net.PARAM_Gradient = (float) 0.1;
 
 
-
-        int x = 8;// Define the amount of bars in average comparison.
+        int x = 15;// Define the amount of bars in average comparison.
         // of the previous x bars.
 
 
@@ -56,38 +57,62 @@ public class FileReading {
             }
             Random rand = new Random();
             int random;
-            for (int iteration = 0; iteration < 100000; iteration++) {
+            for (int iteration = 0; iteration < 999999999; iteration++) {
                 random = rand.nextInt(Bars.size());
                 Bar bar = Bars.get(random);
-                if (bar.getIndex()< (x+1)){
+                while ( (bar.getIndex() < (x+1)) || ((bar.getIndex() % 3) == 0) ){
+                    random = rand.nextInt(Bars.size());
+                    bar = Bars.get(random);
                     continue;
                 }
-                    avg_BarValues = new double[bar.getIndicatorValues().length];
-                    for (int i = random - x ; i < random; i++) { // For the last x bars
-                        for (int j = 0; j < avg_BarValues.length; j++) {
-                            avg_BarValues[j] = avg_BarValues[j] + Bars.get(i).getIndicatorValues()[j];
-                        }
-                    }
-                    for (int i = 0; i < avg_BarValues.length; i++) {
-                        avg_BarValues[i] = avg_BarValues[i] / x;
-                    }
+                //if ( (bar.getIndex() < (x+1)) || ((bar.getIndex() % 3) == 0) ){
+                //    continue;
+                //}
+                    //avg_BarValues = new double[bar.getIndicatorValues().length];
+                    //for (int i = random - x ; i < random; i++) { // For the last x bars
+                    //    for (int j = 0; j < avg_BarValues.length; j++) {
+                    //        avg_BarValues[j] = avg_BarValues[j] + Bars.get(i).getIndicatorValues()[j];
+                    //    }
+                    //}
+                    //for (int i = 0; i < avg_BarValues.length; i++) {
+                    //    avg_BarValues[i] = avg_BarValues[i] / x;
+                    //}
 
 
-                    difference = new double[bar.getIndicatorValues().length];
-                    price_diff = new double[bar.getIndicatorValues().length];
+                    //difference = new double[bar.getIndicatorValues().length];
+                    //price_diff = new double[bar.getIndicatorValues().length];
 
-                    for (int i = 0; i < bar.getIndicatorValues().length; i++) {
-                        difference[i] = ( bar.getIndicatorValues()[i] / avg_BarValues[i] ) - 0.5;
-                        price_diff[i] = difference[i];
-                    }
+                    //for (int i = 0; i < bar.getIndicatorValues().length; i++) {
+                    //    difference[i] = ( bar.getIndicatorValues()[i] / avg_BarValues[i] ) - 0.5;
+                    //    price_diff[i] = difference[i];
+                    //}
 
-                    float[] input = new float[bar.getIndicatorValues().length];
-                    float[] output = new float[bar.getIndicatorValues().length];
+                    float[] input = new float[x];
+                    float[] output = new float[1];
 
                     for (int i = 0; i < input.length; i++) {
-                        input[i] = (float) avg_BarValues[i];
-                        output[i] = (float) price_diff[i];
+                        input[i] = (float) Bars.get((bar.getIndex() - (x-i))).getIndicatorValues()[0];
+                        //input[i] = (float) avg_BarValues[i];
+                        //output[i] = (float) price_diff[i];
                     }
+                    output[0] = (float) bar.getIndicatorValues()[0];
+                    net.train(input,output);
+
+
+                    random = rand.nextInt(Bars.size());
+                    bar = Bars.get(random);
+                    while ( (bar.getIndex() < (x+1)) || ((bar.getIndex() % 3) != 0) ){
+                            random = rand.nextInt(Bars.size());
+                            bar = Bars.get(random);
+                            continue;
+                        }
+
+                for (int i = 0; i < input.length; i++) {
+                    input[i] = (float) Bars.get((bar.getIndex() - (x-i))).getIndicatorValues()[0];
+                    //input[i] = (float) avg_BarValues[i];
+                    //output[i] = (float) price_diff[i];
+                }
+                output[0] = (float) bar.getIndicatorValues()[0];
 
                     float[] predicted = net.calculate(input);
 
@@ -99,17 +124,12 @@ public class FileReading {
                         error = error + (output[i] - predicted[i])*(output[i] - predicted[i]);
                     }
                     error = error / output.length;
-                    if ((barCount % 1000) == 0 && barCount != 0){
-                        System.out.println("Average Error Per Output Neuron: " + (error / 1000) * 1000000); //Making reading error more pleasant
-                        System.out.println("Actual");
-                        if ((barCount % 10000) == 0 && barCount != 0){
-                            System.err.println("Average Error Per Output Neuron: " + (error / 10000) * 1000000); //Making reading error more pleasant
-                        }
-                    }
-                    error = 0;
 
-                    net.train(input,output);
-                    barCount++;
+                        if ((iteration % 5000) == 0 && iteration != 0){
+                            System.out.println("Average Error Per Output Neuron over 5000: " + (error / 5000) * 100000); //Making reading error more pleasant
+                            System.out.println("Iteration : "+ iteration +"    Predicted : " + predicted[0] + "    Target : " + output[0] + "\n");
+                            error = 0;
+                        }
                 }
 
         } catch (FileNotFoundException e) {

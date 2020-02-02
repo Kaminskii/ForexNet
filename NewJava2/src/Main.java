@@ -10,31 +10,33 @@ public class Main {
 
         // String url = "ls-7747fafb702e9b0e95827d986e35040c609dd263.cztwonmsggwh.eu-west-2.rds.amazonaws.com";
         //String url = "dbc:sqlserver://ls-7747fafb702e9b0e95827d986e35040c609dd263.cztwonmsggwh.eu-west-2.rds.amazonaws.com:3306;DatabaseName=bardata";
-        String user = "mehowmeta2";
-        String password = "Once there was a spliff";
-        connectJDBCToAWSEC2();
+        //String user = "mehowmeta2";
+        //String password = "Once there was a spliff";
+        //connectJDBCToAWSEC2();
 
-        Network net = new Network(2,10,1,10,1);
-        net.PARAM_Gradient = (float) 0.01;
-        net.PARAM_LearnRate = (float) 0.01;
-        float[] input = new float[2];
-        float[] output = new float[1];
-        float[] predicted;
-        input[0] = -3;
-        input[0] = 3;
-        output[0] = (float) 6;
+        //Network net = new Network(2,10,1,10,1);
+        //net.PARAM_Gradient = (float) 0.01;
+        //net.PARAM_LearnRate = (float) 0.01;
+        //float[] input = new float[2];
+        //float[] output = new float[1];
+        //float[] predicted;
+        //input[0] = -3;
+        //input[0] = 3;
+        //output[0] = (float) 6;
 
-        float error = 0;
-        for (int i = 0; i < 1000000; i++) {
-            predicted = net.calculate(input);
-            error = error + ((output[0] - predicted[0]) * (output[0] - predicted[0]));
-            net.train(input,output);
-            if ((i % 100) == 0){
-                System.out.println("Average squared error over last 100 : " + error/100);
+        //float error = 0;
+        //for (int i = 0; i < 1000000; i++) {
+        //    predicted = net.calculate(input);
+        //    error = error + ((output[0] - predicted[0]) * (output[0] - predicted[0]));
+        //    net.train(input,output);
+        //    if ((i % 100) == 0){
+        //        System.out.println("Average squared error over last 100 : " + error/100);
 
-                error = 0;
-            }
-        }
+        //        error = 0;
+        //    }
+        //}
+
+        FileReading fileReading = new FileReading("C:\\Users\\Michal\\AppData\\Roaming\\MetaQuotes\\Tester\\D0E8209F77C8CF37AD8BF550E51FF075\\Agent-127.0.0.1-3000\\MQL5\\Files\\Research\\dataFile.txt");
 
 
     }
