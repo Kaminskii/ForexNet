@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import javax.naming.spi.DirObjectFactory;
 import java.io.*;
 import java.util.ArrayList;
@@ -55,7 +57,7 @@ public class Network {
 
 
     // This function takes some inputs, propagates them, and returns the outputs
-    public float[] calculate(float[] input) { // float for inputs
+    public float[] calculate(@NotNull float[] input) { // float for inputs
         if (input.length != INPUT_SIZE) return null; // checking if inputs size match the amount of input neurons
         for (int i = 0; i < NETWORK_LAYER_SIZE[0]; i++) { // for each input neuron
             layers[0].getNeuron(i).setOutput(input[i]); // setting the neurons output to the input
