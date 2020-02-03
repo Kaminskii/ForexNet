@@ -28,7 +28,7 @@ public class FileReading<x> {
         String line;
         int barCount = 0;
         double error = 0;
-        Network net = new Network(7,50,50,1);
+        Network net = new Network(7,50,100,50,1);
         net.PARAM_LearnRate = (float) 0.01;
         net.PARAM_Gradient = (float) 0.02;
 
@@ -137,8 +137,8 @@ public class FileReading<x> {
                             continue;
                         }
 
-
-                for (int i = 0; i < rows; i++) {
+                input[0] = (float) bar.getIndicatorValues()[0]; // also giving the price of the last bar before
+                for (int i = 1; i < rows; i++) {
                     input[i] = (float) indicator_gradients[i];
                 }
                 output[0] = (float) bar.getIndicatorValues()[0];
@@ -190,4 +190,6 @@ public class FileReading<x> {
         String s = new String(cleaned);
         return s;
     }
+
+
 }
