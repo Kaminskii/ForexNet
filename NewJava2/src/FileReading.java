@@ -21,58 +21,113 @@ public class FileReading<x> {
 
     double[] BarValues;
 
-    public double[] getIndicatorGradients(Bar bar,double[][] indicator_Table){
+    public double[] getIndicatorGradients(Bar bar,double[][] indicator_Table,boolean forecasting){
         double[] y_average;
         double x_average;
         int rows = bar.getIndicatorValues().length;
         y_average = new double[rows];
-        x_average = 0;// Is there a simpler way to sum all integers upto x?
-        for (int i = 0; i < x; i++) {
-            x_average = x_average + i;
-        }
-        x_average = x_average / x;
+        x_average = 0;
+        double[] x_temp;
+        double[][] y_temp;
+        double[] indicator_gradients;
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < x; j++) {
-                y_average[i] = y_average[i] + indicator_Table[i][j];
+        if (forecasting){
+            for (int i = 0; i < y; i++) {
+                x_average = x_average + i;
             }
-        }
-        for (int i = 0; i < y_average.length; i++) {
-            y_average[i] = y_average[i] / x;
-        }
-        //Now calculating the slope of each indicator
-        double[] x_temp = new double[x];
-        double[][] y_temp = new double[rows][x];
-        double[] indicator_gradients = new double[rows];
+            x_average = x_average / y;
 
-        for (int j = 0; j < rows; j++) {
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < y; j++) {
+                    y_average[i] = y_average[i] + indicator_Table[i][j];
+                }
+            }
+            for (int i = 0; i < rows; i++) {
+                y_average[i] = y_average[i] / y;
+            }
+
+            x_temp = new double[y];
+            y_temp = new double[rows][y];
+            indicator_gradients = new double[rows];
+
+            for (int j = 0; j < rows; j++) {
+                for (int i = 0; i < y; i++) {
+                    x_temp[i] = i - x_average;
+                    y_temp[j][i] = indicator_Table[j][i] - y_average[j];
+                }
+            }
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < y; j++) {
+                    indicator_gradients[i] = ( x_temp[j] * y_temp[i][j] ) / ( x_temp[j] * x_temp[j] );
+                }
+            }
+
+        }
+        else {
             for (int i = 0; i < x; i++) {
-                x_temp[i] = i - x_average;
-                y_temp[j][i] = indicator_Table[j][i] - y_average[j];
+                x_average = x_average + i;
+            }
+            x_average = x_average / x;
+
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < x; j++) {
+                    y_average[i] = y_average[i] + indicator_Table[i][j];
+                }
+            }
+            for (int i = 0; i < y_average.length; i++) {
+                y_average[i] = y_average[i] / x;
+            }
+            //Now calculating the slope of each indicator
+
+            x_temp = new double[x];
+            y_temp = new double[rows][x];
+            indicator_gradients = new double[rows];
+
+            for (int j = 0; j < rows; j++) {
+                for (int i = 0; i < x; i++) {
+                    x_temp[i] = i - x_average;
+                    y_temp[j][i] = indicator_Table[j][i] - y_average[j];
+                }
+            }
+
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < x; j++) {
+                    indicator_gradients[i] = ( x_temp[j] * y_temp[i][j] ) / ( x_temp[j] * x_temp[j] );
+                }
             }
         }
 
-
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < x; j++) {
-                indicator_gradients[i] = ( x_temp[j] * y_temp[i][j] ) / ( x_temp[j] * x_temp[j] );
-            }
-        }
         return indicator_gradients;
     }
 
-    public double[][] getIndicatorTable(Bar bar){
-        double[][] indicator_Table = new double[bar.getIndicatorValues().length][x];
-        for (int i = bar.getIndex() - x ; i < bar.getIndex(); i++) { // For the last x bars
-            for (int j = 0; j < bar.getIndicatorValues().length; j++) {
-                try{
-                    indicator_Table[j][i - (bar.getIndex()-x)] = Bars.get(i).getIndicatorValues()[j];
-                } catch (IndexOutOfBoundsException e){
-                    System.out.println("Error : " + e);
-                }
+    public double[][] getIndicatorTable(Bar bar,boolean forecasting){
+        double[][] indicator_Table;
 
+        if (forecasting){
+            indicator_Table = new double[bar.getIndicatorValues().length][y];
+            for (int i = bar.getIndex(); i < bar.getIndex() + y; i++) { // For the next y bars
+                for (int j = 0; j < bar.getIndicatorValues().length; j++) {
+                    try{
+                        indicator_Table[j][i - (bar.getIndex())] = Bars.get(i).getIndicatorValues()[j];
+                    } catch (IndexOutOfBoundsException e){
+                        System.out.println("Error : " + e);
+                    }
+                }
+            }
+        } else {
+            indicator_Table = new double[bar.getIndicatorValues().length][x];
+            for (int i = bar.getIndex() - x ; i < bar.getIndex(); i++) { // For the last x bars
+                for (int j = 0; j < bar.getIndicatorValues().length; j++) {
+                    try{
+                        indicator_Table[j][i - (bar.getIndex()-x)] = Bars.get(i).getIndicatorValues()[j];
+                    } catch (IndexOutOfBoundsException e){
+                        System.out.println("Error : " + e);
+                    }
+                }
             }
         }
+
+
         return indicator_Table;
     }
 
@@ -82,7 +137,7 @@ public class FileReading<x> {
         int barCount = 0;
         double error = 0;
         float temp = 0;
-        Network net = new Network(6,50,100,50,1);
+        Network net = new Network(7,50,100,50,1);
         net.PARAM_LearnRate = (float) 0.01;
         net.PARAM_Gradient = (float) 0.02;
 
@@ -104,11 +159,10 @@ public class FileReading<x> {
             }
             Random rand = new Random();
             int random;
-            double[] y_average;
-            double x_average;
             double[][] indicator_Table;
-            double[] indicator_gradients;
-
+            double[] indicator_gradients_inputs;
+            double[] indicator_gradients_outputs;
+            double average;
             for (int iteration = 0; iteration < 999999999; iteration++) {
                 random = rand.nextInt(Bars.size());
                 Bar bar = Bars.get(random);
@@ -120,18 +174,33 @@ public class FileReading<x> {
 
 
          int rows = bar.getIndicatorValues().length;
-         float[] input = new float[rows];
-         indicator_Table = getIndicatorTable(bar);
-         indicator_gradients = getIndicatorGradients(bar,indicator_Table);
-         for (int i = 0; i < rows; i++) { // First adding the indicator gradient values
-             input[i] = (float) indicator_gradients[i];
+         float[] input = new float[rows + 1];
+         indicator_gradients_inputs = getIndicatorGradients(bar,getIndicatorTable(bar,false),false);
+         for (int i = 0; i < rows; i++) { // First adding the indicator gradient values to inputs
+             input[i] = (float) indicator_gradients_inputs[i];
          }
-         float[] output = new float[y]; //Loading next y prices into the output neurons
 
-                output[0] = (float) Bars.get(bar.getIndex()).getIndicatorValues()[0];
-         for (int i = 1; i < y; i++) {
-             output[i] = (float) (Bars.get(bar.getIndex() + i).getIndicatorValues()[0] - output[i-1]);
+         average = 0;
+         for (int i = 0; i < x; i++) {
+             average = average + Bars.get(bar.getIndex() - i).getIndicatorValues()[0];
          }
+         average = average / x;
+         input[input.length - 1] = (float) average; //setting the last input value as the average price over last x
+
+
+         float[] output = new float[1]; // Just one output with the average of the next y prices
+         average = 0;
+         for (int i = 0; i < y; i++) {
+            average = average + Bars.get(bar.getIndex() + i).getIndicatorValues()[0];
+         }
+         average = average / y;
+         output[0] = (float) average;
+
+         //indicator_gradients_outputs = getIndicatorGradients(bar,getIndicatorTable(bar,true),true);
+         //for (int i = 0; i < output.length; i++) { // First adding the indicator gradient values to inputs
+         //    output[i] = (float) indicator_gradients_outputs[i];
+         //}
+
 
          net.train(input,output);
 
@@ -139,22 +208,24 @@ public class FileReading<x> {
 
          random = rand.nextInt(Bars.size());
          bar = Bars.get(random);
-         while ( (bar.getIndex() < (rows + x + 1)) || ((bar.getIndex() % 3) != 0) || (bar.getIndex() > (Bars.size() - y - 1)) ){
+         while ( (bar.getIndex() < (rows + 1)) || ((bar.getIndex() % 3) != 0) || (bar.getIndex() > (Bars.size() - y - 1)) ){
                  random = rand.nextInt(Bars.size());
                  bar = Bars.get(random);
                  continue;
              }
 
          rows = bar.getIndicatorValues().length;
-         indicator_Table = getIndicatorTable(bar);
-         indicator_gradients = getIndicatorGradients(bar,indicator_Table);
+         indicator_gradients_inputs = getIndicatorGradients(bar,getIndicatorTable(bar,false),false);
+
          for (int i = 0; i < rows; i++) { // First adding the indicator gradient values
-             input[i] = (float) indicator_gradients[i];
+             input[i] = (float) indicator_gradients_inputs[i];
          }
-                output[0] = (float) Bars.get(bar.getIndex()).getIndicatorValues()[0];
-                for (int i = 1; i < y; i++) {
-                    output[i] = (float) (Bars.get(bar.getIndex() + i).getIndicatorValues()[0] - output[i-1]);
-                }
+         average = 0;
+         for (int i = 0; i < x; i++) {
+             average = average + Bars.get(bar.getIndex() - i).getIndicatorValues()[0];
+         }
+         average = average / x;
+         input[input.length - 1] = (float) average; //setting the last input value as the average price over last x
 
          float[] predicted = net.calculate(input);
          if (output.length != predicted.length){ // Difference in size,
@@ -166,7 +237,7 @@ public class FileReading<x> {
          }
          error = error + (temp / output.length);
          if ((iteration % 5000) == 0 && iteration != 0){
-             System.out.println("Average Error Per Output Neuron over 5000: " + (error / 5000) * 100000); //Making reading error more pleasant
+             System.out.println("Average Error Per Output Neuron over 5000: " + (error / 5000) * 1000); //Making reading error more pleasant
              System.out.println("Iteration : "+ iteration +"    Predicted : " + predicted[0] + "    Target : " + output[0] + "\n");
              error = 0;
          }
@@ -201,6 +272,4 @@ public class FileReading<x> {
         String s = new String(cleaned);
         return s;
     }
-
-
 }
