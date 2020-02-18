@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3f691839-48bc-4ecd-9b8c-07ee727c89c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.floo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.flooignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/MQLMySQL.rc" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/MQLMySQL.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Debug/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x32/Release/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Debug/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/MQLMySQL.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewJava2/FileReading.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewJava2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewJava2/Network.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileReading.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jackaws@%" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="c8a063d1-9a60-4024-9637-77209dc12611" />
+    </checked>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Michal\Dropbox\WillsCoding\Mehow\ForexNet\NewJava2\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Wyku4gUXdbCIBDHpdmHXUwyjGu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michal\Dropbox\WillsCoding\Mehow\ForexNet\NewJava2\libs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michal\Dropbox\WillsCoding\Mehow\ForexNet\NewJava2\libs" />
+      <recent name="C:\Users\Michal\Dropbox\WillsCoding\Mehow\ForexNet\" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$APPLICATION_HOME_DIR$/jbr" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="NewJava2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sqlconnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sqlconnection" />
+      <module name="NewJava2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.sqlconnection" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.sqlconnection" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f691839-48bc-4ecd-9b8c-07ee727c89c7" name="Default Changelist" comment="" />
+      <created>1580129441362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580129441362</updated>
+      <workItem from="1580129444614" duration="13438000" />
+      <workItem from="1580147323867" duration="6273000" />
+      <workItem from="1580157624678" duration="721000" />
+      <workItem from="1580158381780" duration="87000" />
+      <workItem from="1580303259165" duration="4701000" />
+      <workItem from="1580484170917" duration="4992000" />
+      <workItem from="1580563820682" duration="25786000" />
+      <workItem from="1580677718930" duration="12000" />
+      <workItem from="1580677893858" duration="100000" />
+      <workItem from="1580678109530" duration="107000" />
+      <workItem from="1580678452578" duration="738000" />
+      <workItem from="1580680780574" duration="73000" />
+      <workItem from="1580680891723" duration="29000" />
+      <workItem from="1580681651843" duration="447000" />
+      <workItem from="1580682150254" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1895" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580681832752">
+      <screen x="-1920" y="174" width="1280" height="693" />
+    </state>
+    <state x="-1895" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.174.1280.693/0.0.1920.1040@-1920.174.1280.693" timestamp="1580681832752" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1580680918154" />
+    <state x="371" y="124" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580680916994">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="124" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1580680916994" />
+    <state x="-1499" y="271" key="FileChooserDialogImpl" timestamp="1580681692216">
+      <screen x="-1920" y="174" width="1280" height="693" />
+    </state>
+    <state x="-1499" y="271" key="FileChooserDialogImpl/-1920.174.1280.693/0.0.1920.1040@-1920.174.1280.693" timestamp="1580681692216" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1580678214014" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1580156416675">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580156416675" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1580156416675">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580156416675" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1580156416675">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580156416675" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1580156416675">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580156416675" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1580677993387">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1580677993387" />
+    <state x="-1583" y="341" key="com.intellij.ide.util.TipDialog" timestamp="1580682149959">
+      <screen x="-1920" y="174" width="1280" height="693" />
+    </state>
+    <state x="-1583" y="341" key="com.intellij.ide.util.TipDialog/-1920.174.1280.693/0.0.1920.1040@-1920.174.1280.693" timestamp="1580682149959" />
+    <state x="506" y="251" key="com.intellij.ide.util.TipDialog/-1920.174.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1580676507965" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1580678119656" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((Network)this).layers" custom="Network" />
+        <watch expression="((Network)this).layers[1]" custom="Network" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

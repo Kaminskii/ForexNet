@@ -48,6 +48,7 @@
       <change beforePath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/MQL5-MySQL/MQLMySQL-Project-master/MQLMySQL/x64/Release/MQLMySQL.tlog/rc.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewJava2/src/FileReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewJava2/src/FileReading.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,15 +84,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -107,7 +108,8 @@
       <updated>1580052730755</updated>
       <workItem from="1580052732246" duration="10833000" />
       <workItem from="1580678219885" duration="258000" />
-      <workItem from="1580678794950" duration="457000" />
+      <workItem from="1580678794950" duration="2359000" />
+      <workItem from="1580681305083" duration="26000" />
     </task>
     <servers />
   </component>
@@ -131,19 +133,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580680883996">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1580680883996" />
-    <state x="371" y="124" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580680880473">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="124" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1580680880473" />
-    <state x="632" y="145" key="FileChooserDialogImpl" timestamp="1580681348767">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="632" y="145" key="FileChooserDialogImpl/-1920.174.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1580681348767" />
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1580680958632" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1580678355166">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

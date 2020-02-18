@@ -1,4 +1,3 @@
-import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -36,7 +35,7 @@ public class Main {
         //    }
         //}
 
-        FileReading fileReading = new FileReading("C:\\Users\\Michal\\AppData\\Roaming\\MetaQuotes\\Tester\\D0E8209F77C8CF37AD8BF550E51FF075\\Agent-127.0.0.1-3000\\MQL5\\Files\\Research\\dataFile.txt");
+        FileReading fileReading = new FileReading("C:\\Users\\Michal\\Desktop\\MT5 Bars\\EURUSD_M1_6Months.txt");
 
 
     }
